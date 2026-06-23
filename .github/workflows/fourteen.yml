@@ -3,14 +3,10 @@ name: QuantumROM Tools.
 on:
   workflow_dispatch:
     inputs:
-      BRANCH:
-        description: "Git branch to use (e.g. fifteen)"
-        required: true
-        default: "fourteen"
       STOCK_DEVICE:
         description: "STOCK_DEVICE_MODEL or None"
         required: true
-        default: "SM-A225F"
+        default: "SM-A325F"
       TARGET_DEVICE:
         description: "TARGET_DEVICE_MODEL."
         required: true
@@ -18,15 +14,19 @@ on:
       TARGET_DEVICE_CSC:
         description: "TARGET_DEVICE_CSC."
         required: true
-        default: "BKD"
+        default: "INS"
       TARGET_DEVICE_IMEI:
         description: "TARGET_DEVICE_IMEI."
         required: true
         default: "353435774197736"
+      TARGET_FW_VERSION:
+        description: "Any specific firmware release version."
+        required: false
+        default: "A346EXXSEEZC7/A346EODMEEZC7/A346EXXSEEZC7/A346EXXSEEZC7"
       OUTPUT_FILESYSTEM:
         description: "OUTPUT_FILESYSTEM. e.g erofs / ext4"
         required: true
-        default: "erofs"
+        default: "ex4"
       COMPRESS_IMG_TO_XZ:
         description: "Compress IMG to XZ (True/False)"
         required: true
