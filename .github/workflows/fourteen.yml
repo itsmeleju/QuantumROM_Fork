@@ -3,6 +3,10 @@ name: QuantumROM Tools.
 on:
   workflow_dispatch:
     inputs:
+      BRANCH:
+        description: "Git branch to use (e.g. fifteen)"
+        required: true
+        default: "fourteen"
       STOCK_DEVICE:
         description: "STOCK_DEVICE_MODEL or None"
         required: true
